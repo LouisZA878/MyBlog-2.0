@@ -1,0 +1,17 @@
+<%- include("partials/header") -%>
+
+<h1>Home</h1>
+<p>
+    <%= firstPara %>
+</p>    
+<%= console.log(theArray) %>
+    <% for (var i = 0; i < theArray.length; i++) { %>
+
+        <p> 
+            <h2><%= theArray[i].Tile; %></h2>
+            <%= theArray[i].Comment.substring(0, 100) + "..." %><a href="posts/<%= theArray[i].Tile %>">Read More</a>
+
+    <% } %> 
+        </p>
+    <a class="btn btn-primary" href="/compose" role="button">Compose</a>
+<%- include("partials/footer") -%>
